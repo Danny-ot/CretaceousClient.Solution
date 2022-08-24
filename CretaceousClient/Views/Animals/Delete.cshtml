@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Delete";
+}
+
+@model CretaceousClient.Models.Animal;
+
+<div>
+    Are You Sure That You Want To Delete @Model.Name
+    @using (Html.BeginForm())
+    {
+        <input type="submit" value="Delete" class="btn btn-danger">
+    }
+    @Html.ActionLink("No" , "Details" , new {id = Model.AnimalId})
+</div>

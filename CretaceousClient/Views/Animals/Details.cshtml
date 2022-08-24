@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Details";
+}
+@using CretaceousClient.Models;
+@model CretaceousClient.Models.Animal;
+
+<div>
+    <p>@Html.DisplayNameFor(model => model.AnimalId) : @Html.DisplayFor(model => model.AnimalId)</p>
+    <p>@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)</p>
+    <p>@Html.DisplayNameFor(model => model.Species) : @Html.DisplayFor(model => model.Species)</p>
+    <p>@Html.DisplayNameFor(model => model.Gender) : @Html.DisplayFor(model => model.Gender)</p>
+    <p>@Html.DisplayNameFor(model => model.Age) : @Html.DisplayFor(model => model.Age)</p>
+</div>
+
+<div class="mt-3">
+    @Html.ActionLink("Edit Animal" , "Edit" , new{id = Model.AnimalId})
+    @Html.ActionLink("Delete Animal" , "Delete" , new{id = Model.AnimalId})
+</div>

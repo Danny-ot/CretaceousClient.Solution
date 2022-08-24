@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Animals";
+}
+<h1>All Animals:</h1>
+
+<ol>
+@foreach (Animal animal in Model)
+{
+    <ul>
+        <li>ID: @animal.AnimalId</li>
+        <li>Name: @animal.Name</li>
+    </ul>
+    <a href="/Animals/Details/@(animal.AnimalId)"><p>View Details</p></a>
+    <br>
+}
+</ol>
+
+@Html.ActionLink("Add Animal" , "Create")
